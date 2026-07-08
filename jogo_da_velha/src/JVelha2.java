@@ -202,14 +202,14 @@ public class JVelha2 {
                 System.out.println("o Jogador venceu!");
                 break;
             }
-            if (tabuleiro[1][0] == jogadorAtual && tabuleiro[2][0] == jogadorAtual && tabuleiro[3][0] == jogadorAtual) {
+            if (tabuleiro[0][0] == jogadorAtual && tabuleiro[1][0] == jogadorAtual && tabuleiro[2][0] == jogadorAtual) {
                 //x..
                 //x..
                 //x..
                 System.out.println("o Jogador venceu!");
                 break;
             }
-            if (tabuleiro[0][1] == jogadorAtual && tabuleiro[2][1] == jogadorAtual && tabuleiro[3][1] == jogadorAtual) {
+            if (tabuleiro[0][1] == jogadorAtual && tabuleiro[1][1] == jogadorAtual && tabuleiro[2][1] == jogadorAtual) {
                 //.x.
                 //.x.
                 //.x.
