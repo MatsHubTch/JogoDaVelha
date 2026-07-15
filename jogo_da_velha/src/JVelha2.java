@@ -30,10 +30,13 @@ public class JVelha2 {
         String AZUL = "\u001B[34m";
         while (true) {
 
-            if (tabu[0][0] != 1 && tabu[0][1] != 2 && tabu[0][2] != 3
-            || tabu[1][0] != 4 && tabu[1][1] != 5 && tabu[1][2] != 6
-            || tabu[2][0] != 7 && tabu[2][1] != 8 && tabu[2][2] != 9
-            ) System.out.print("DEU VELHA!");
+            System.out.println("\n");
+            System.out.print(" " + cor(tabu[0][0]) + " | " + cor(tabu[0][1]) + " | " + cor(tabu[0][2]) + "\n");
+            System.out.println("-----------");
+            System.out.print(" " + cor(tabu[1][0]) + " | " + cor(tabu[1][1]) + " | " + cor(tabu[1][2]) + "\n");
+            System.out.println("-----------");
+            System.out.print(" " + cor(tabu[2][0]) + " | " + cor(tabu[2][1]) + " | " + cor(tabu[2][2]) + "\n");
+            System.out.println("-------------------------\n");
 
             // ------------------------------------MINHAS VITÓRIAS-------------------------------------
             if (tabu[0][0] == j_Atual && tabu[0][1] == j_Atual && tabu[0][2] == j_Atual
@@ -59,16 +62,16 @@ public class JVelha2 {
                 System.out.println("O Roberto venceu!");
                 break;
             }
+
+            if (tabu[0][0] != '1' && tabu[0][1] != '2' && tabu[0][2] != '3' &&
+                    tabu[1][0] != '4' && tabu[1][1] != '5' && tabu[1][2] != '6' &&
+                    tabu[2][0] != '7' && tabu[2][1] != '8' && tabu[2][2] != '9'
+            ) System.out.print("DEU VELHA!");
+
             //-----------------------------MINHA JOGADA----------------------------------------------------------------
             roberto = 1;
             pqsim = 1;
-            System.out.println("\n");
-            System.out.print(" " + cor(tabu[0][0]) + " | " + cor(tabu[0][1]) + " | " + cor(tabu[0][2]) + "\n");
-            System.out.println("-----------");
-            System.out.print(" " + cor(tabu[1][0]) + " | " + cor(tabu[1][1]) + " | " + cor(tabu[1][2]) + "\n");
-            System.out.println("-----------");
-            System.out.print(" " + cor(tabu[2][0]) + " | " + cor(tabu[2][1]) + " | " + cor(tabu[2][2]) + "\n");
-            System.out.println("-------------------------\n");
+
             System.out.print("Turno do [" + j_Atual + "] - Escolha uma posição livre (1 a 9): ");
             int jogada = teclado.nextInt();
             int linha = (jogada - 1) / 3;
